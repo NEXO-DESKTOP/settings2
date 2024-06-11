@@ -15,13 +15,15 @@
     <section class="bigcard" id="wifinet">
         <div style="display: flex; justify-content: space-between;">
             <h2>Conexión Inalámbrica</h2>
-            <input type="checkbox" class="switch" id="togglewifi">
-        </div>
+            <label class="switch">
+                <input id="togglewifi" type="checkbox">
+                <span class="slider"></span>
+              </label>        
+            </div>
         <div id="redes">
             <select style="margin-top: -10px;" class="canopen" id="adapters">
             </select>
-            <section class="cardbox">
-                <p>Para comenzar, conecte un adaptador inalámbrico a su dispositivo.</p>
+            <section id="netlist" class="cardbox">
             </section>
         </div>
 
