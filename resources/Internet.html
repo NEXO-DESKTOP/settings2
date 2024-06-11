@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Ajustes</title>
+</head>
+<body>
+    <section class="left-panel"></section>
+    <section class="right-panel">
+
+    <h1>Internet</h1>
+
+    <section class="bigcard" id="wifinet">
+        <div style="display: flex; justify-content: space-between;">
+            <h2>Conexión Inalámbrica</h2>
+            <input type="checkbox" class="switch" id="togglewifi">
+        </div>
+        <div id="redes">
+            <select style="margin-top: -10px;" class="canopen" id="adapters">
+            </select>
+            <section class="cardbox">
+                <p>Para comenzar, conecte un adaptador inalámbrico a su dispositivo.</p>
+            </section>
+        </div>
+
+    </section>
+
+
+    <section class="canopen bigcard"  id="opennet">
+        <h2>Gestor de Redes</h2>
+        <p>Configura tu red de internet</p>
+        <div class="open"></div>
+
+    </section>
+
+    <section class="canopen bigcard" id="speedtest">
+        <h2>Test de Velocidad</h2>
+        <p>Realiza un test de velocidad de tu conexión a internet. <b>Se usará el servicio FAST de Netfix Inc.</b></p>
+        <div class="open"></div>
+    </section>
+
+    <section class="bigcard">
+        <div style="display: flex; justify-content: space-between;">
+            <h2>ZeroNet</h2>
+            <input type="checkbox" class="switch" id="togglezeronet">
+        </div>
+        <p>ZeroNet es una red descentralizada que permite a los usuarios alojar sitios web de forma anónima y segura.</p>
+        <div style="display: flex; justify-content: right;">
+            <button id="zeromoreinfo">Más Información</button>
+        </div>    
+    </section>
+
+    <section class="bigcard">
+        <div style="display: flex; justify-content: space-between;">
+            <h2>Red Tor</h2>
+            <input type="checkbox" class="switch" id="toggletor">
+        </div>
+        <p>La red Tor es una red de comunicaciones superpuesta y distribuida que permite el anonimato en Internet.</p>
+        <div style="display: flex; justify-content: right;">
+            <button id="tormoreinfo">Más Información</button>
+        </div>
+    </section>
+
+    <section class="bigcard">
+        <h2>Datos de la Red</h2>
+        <p id="netstats">Cargando...</p>
+    </section>
+    
+</body>
+<script src="js/neutralino.js"></script>
+<script src="js/index.js"></script>
+<script src="js/Internet.js"></script>
+
+</html>
