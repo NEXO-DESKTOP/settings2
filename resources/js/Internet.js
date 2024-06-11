@@ -49,31 +49,34 @@ function updateWifiList() {
 
             columns = columns.filter((_, index) => ![1, 3, 4, 5, 7, 8].includes(index)); // Omit columns 2, 4, 5, 6, 8, 9
 
-            // Replace * in the first column with <span class="symbol">check_circle</span> and make the text bold
+            // Replace * in the first column with <p class="symbol">check_circle</p> and make the text bold
             if (columns[0] === '*') {
-                columns[0] = '<span class="symbol">check_circle</span>';
+                columns[0] = '<p class="symbol">check_circle</p>';
+                columns[1] = '<strong>' + columns[1] + '</strong>'; // Make the text bold
             }
 
-            // Replace the last number of the row based on the conditions
-            let lastElement = columns[columns.length - 1];
-            if (!isNaN(lastElement)) {
-                let lastNumber = parseInt(lastElement);
+            // Find the last number in the columns
+            let lastNumberMatch = columns[columns.length - 1].match(/(\d+)(?!.*\d)/);
+            if (lastNumberMatch) {
+                let lastNumber = parseInt(lastNumberMatch[1]);
+
+                // Replace the last number with the appropriate wifi symbol
                 if (lastNumber < 10) {
-                    columns[columns.length - 1] = '<span class="symbol">network_wifi_0_bar</span>';
+                    columns[columns.length - 1] = columns[columns.length - 1].replace(lastNumber, '<p class="symbol">network_wifi_0_bar</p>');
                 } else if (lastNumber >= 11 && lastNumber <= 20) {
-                    columns[columns.length - 1] = '<span class="symbol">network_wifi_1_bar</span>';
+                    columns[columns.length - 1] = columns[columns.length - 1].replace(lastNumber, '<p class="symbol">network_wifi_1_bar</p>');
                 } else if (lastNumber >= 21 && lastNumber <= 40) {
-                    columns[columns.length - 1] = '<span class="symbol">network_wifi_2_bar</span>';
+                    columns[columns.length - 1] = columns[columns.length - 1].replace(lastNumber, '<p class="symbol">network_wifi_2_bar</p>');
                 } else if (lastNumber >= 41 && lastNumber <= 70) {
-                    columns[columns.length - 1] = '<span class="symbol">network_wifi_3_bar</span>';
+                    columns[columns.length - 1] = columns[columns.length - 1].replace(lastNumber, '<p class="symbol">network_wifi_3_bar</p>');
                 } else if (lastNumber >= 71) {
-                    columns[columns.length - 1] = '<span class="symbol">signal_wifi_4_bar</span>';
+                    columns[columns.length - 1] = columns[columns.length - 1].replace(lastNumber, '<p class="symbol">signal_wifi_4_bar</p>');
                 }
             }
 
             let smalllist = document.createElement('div');
             smalllist.className = 'smalllist';
-            smalllist.innerHTML = '<strong>' + columns.join(' ') + '</strong>'; // Use innerHTML to render the HTML tag
+            smalllist.innerHTML = columns.join(' '); // Use innerHTML to render the HTML tag
 
             netlist.appendChild(smalllist);
         }

@@ -12,3 +12,4 @@ neutralino.js
 .storage
 *.log
 .tmp/auth_info.json
+.tmp/auth_info.json
