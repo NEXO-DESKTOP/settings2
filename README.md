@@ -1,15 +1,8 @@
-# neutralinojs-minimal
+#es.coresystem.Settings2
 
-The default template for a Neutralinojs app. It's possible to use your favorite frontend framework by using [these steps](https://neutralino.js.org/docs/getting-started/using-frontend-libraries).
+Settings2 is the succesor of es.post0.Settigs (Source code not avaiable) for the fonsOS 2 operative system.
+It is based in the same css and html as Settings, but it uses NeutralinoJS ins stead of ElectronJS because it is much faster and since fonsOS y is mostly based in JS apps, running multiple chromium instances is a mess.
 
-## Contributors
+This app is incomplete and mostly all features are not working.
 
-[![Contributors](https://contrib.rocks/image?repo=neutralinojs/neutralinojs-minimal)](https://github.com/neutralinojs/neutralinojs-minimal/graphs/contributors)
-
-## License
-
-[MIT](LICENSE)
-
-## Icon credits
-
-- `trayIcon.png` - Made by [Freepik](https://www.freepik.com) and downloaded from [Flaticon](https://www.flaticon.com)
+Settings2 includes new ways to interact with the fonsOS system, like an updater for the new GeminiSystem, the management of SOGUESTs and OSGUESTs, CerebroCore and UnifiedUI tweaks.
