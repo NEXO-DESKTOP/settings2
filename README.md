@@ -1,7 +1,7 @@
 # es.coresystem.Settings2
 
 Settings2 is the succesor of es.post0.Settigs (Source code not avaiable) for the fonsOS 2+ operative system.
-It is based in the same css and html as Settings, but it uses NeutralinoJS ins stead of ElectronJS because it is much faster and since fonsOS y is mostly based in JS apps, running multiple chromium instances is a mess.
+It is based in the same css and html as Settings, but it uses NeutralinoJS instead of ElectronJS because it is much faster and since fonsOS apps are mostly based in JS apps, running multiple chromium instances is a mess.
 
 Is unclear if fonsOS 2 will use this app, right now internal builds use [Gnome Settings APP](https://gitlab.gnome.org/GNOME/gnome-control-center)
 
